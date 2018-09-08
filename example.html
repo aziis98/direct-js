@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+
+	<script src="./index.js"></script>
+</head>
+<body>
+
+	<template id="test-numeric" value="number">
+		<div style="display: flex; flex-direction: column;">
+			<div id="v">Value: @value</div>
+			<button>Add</button>
+			<button>Subtract</button>
+		</div>
+		<script>
+			Direct.Templating.link(this, this.ids.v, ['value']);
+		</script>
+	</template>	
+	
+	<main>
+		<test-numeric value="12"></test-numeric>
+		<test-numeric value="5"></test-numeric>
+	</main>
+
+	<script>
+		Direct.init();
+	</script>
+</body>
+</html>
